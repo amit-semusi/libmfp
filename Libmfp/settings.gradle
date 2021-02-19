@@ -1,0 +1,2 @@
+include ':libmfp'
+include ':app'

@@ -1,0 +1,20 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.appice.appicemfppush">
+
+    <application>
+        <receiver android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationDismissHandler">
+            <intent-filter>
+                <action android:name="com.ibm.mobilefirstplatform.clientsdk.android.app.Cancel_IBMPushNotification"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- Push Settings Start -->
+        <service
+            android:name="com.appice.appicemfppush.AppICEMFPPush"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+</manifest>
